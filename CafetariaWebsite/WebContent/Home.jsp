@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>hello</title>
 </head>
-<body>
+<body style="background-image: https://media.giphy.com/media/xjIlOkfEw6JjB0Xs6U/giphy.gif">
 
 </body>
 </html>
