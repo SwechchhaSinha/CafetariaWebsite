@@ -1,0 +1,29 @@
+<html>
+<head>
+  <link rel="stylesheet" href="CssForNavbar.css">
+</head>
+<body>
+
+<div id="navbar">
+  <a class="active" href="javascript:void(0)">SignUp</a>
+  <a href="javascript:void(0)">Login</a>
+  
+</div>
+
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
+</body>
+</html>
