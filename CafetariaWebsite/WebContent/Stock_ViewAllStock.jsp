@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="x" %> 
+    
 <!DOCTYPE html >
 <html>
 <head>
@@ -25,7 +27,7 @@
     <i class="fa fa-caret-down"></i>
   </button>
   <div class="dropdown-container">
-    <a href="Stock_ViewAllStock.jsp">All</a>
+    <a href="#">All</a>
     <a href="#">Category wise</a>
     
   </div>
@@ -34,7 +36,12 @@
   <a href="#">Update Menu</a>
   <a href="#">Take out stock</a>
 
-
+</div>
+<h1>gfshgxsha</h1>
+<%=session.getAttribute("Stock") %>
+<x:forEach var="food" items="${sessionScope.Stock}" >
+<x:out value="${food.F_id }"></x:out>
+</x:forEach>
 <script>
 window.onscroll = function() {myFunction()};
 
@@ -72,18 +79,8 @@ for (i = 0; i < dropdown.length; i++) {
   });
 }
 </script>
-</div>
-<br>
-<div id="enterDate">
-	<form action="">
-	  Enter date in yyyy-mm-dd:
-	  <input type="text" name="transactionDate">
-	  <input type="submit">
-	</form>
-</div>
 
-<div id="generated">
-	
-</div>
+<br>
+
 </body>
 </html>
