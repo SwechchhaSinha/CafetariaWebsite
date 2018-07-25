@@ -42,8 +42,6 @@ public class EmployeeDaoImpl implements EmployeeDao{
 		statement.setString(1, id);
 		
 		ResultSet rs=statement.executeQuery();
-		if(rs==null)
-			return null;
 		Employee employee=null;
 		while(rs.next())
 		{

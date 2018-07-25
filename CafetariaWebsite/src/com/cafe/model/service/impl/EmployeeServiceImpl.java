@@ -31,10 +31,11 @@ public class EmployeeServiceImpl implements EmployeeService {
 	public Employee searchEmployee(String employeeId) throws ClassNotFoundException, SQLException
 	{
 		
-		Employee employee=employeeDaoImpl.searchEmployee(employeeId);
-		if(employee==null)
-			return null;
-		else
+		Employee employee=null;
+		employee=employeeDaoImpl.searchEmployee(employeeId);
+//		if(employee==null)
+//			return null;
+//		else
 			return employee;
 	}
 	@Override
@@ -53,19 +54,9 @@ public class EmployeeServiceImpl implements EmployeeService {
 	@Override
 	public boolean signupEmployee(Employee employee) throws ClassNotFoundException, SQLException
 	{
-		//EmployeeDaoImpl employeeDaoImpl=new EmployeeDaoImpl();
-		Employee myEmployee=new Employee();
-		myEmployee=employeeDaoImpl.searchEmployee(employee.getEIN());
-		//System.out.println(myEmployee);
-		if(myEmployee==null)
-		{
 			return employeeDaoImpl.insertEmployee(employee);
-		}
-		else
-		{
-			//error message
-			return false;
-		}
+//		else
+//			return false;
 	}
 	///Rahul's 
 		//EmployeeDaoImpl employeeDaoImpl = new EmployeeDaoImpl();

@@ -13,28 +13,7 @@
   <a class="active" href="javascript:void(0)">Logout</a>
   <a style="float:left"><span style="font-size:25px;cursor:pointer" onclick="openNav()">&#9776;</span></a>
   <!-- <a href="javascript:void(0)">Logout</a> -->
-  
 </div>
-
-
-
-<div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
- 
-  <button class="dropdown-btn">View Stock 
-    <i class="fa fa-caret-down"></i>
-  </button>
-  <div class="dropdown-container">
-    <a href="Stock_ViewAllStock.jsp">All</a>
-    <a href="#">Category wise</a>
-    
-  </div>
-  <a href="Stock_GenerateReport.jsp">Generate Report</a>
-  <a href="#">Update Stock</a>
-  <a href="#">Update Menu</a>
-  <a href="#">Take out stock</a>
-
-
 <script>
 window.onscroll = function() {myFunction()};
 
@@ -49,41 +28,38 @@ function myFunction() {
   }
 }
 </script>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">View Stock</a>
+  <a href="Stock_GenerateReport.jsp">Generate Report</a>
+  <a href="#">Update Stock</a>
+  <a href="#">Update Menu</a>
+  <a href="#">Take out stock</a>
 <script>
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
 }
-
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
-}
-var dropdown = document.getElementsByClassName("dropdown-btn");
-var i;
-
-for (i = 0; i < dropdown.length; i++) {
-  dropdown[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var dropdownContent = this.nextElementSibling;
-    if (dropdownContent.style.display === "block") {
-      dropdownContent.style.display = "none";
-    } else {
-      dropdownContent.style.display = "block";
-    }
-  });
 }
 </script>
 </div>
 <br>
 <div id="enterDate">
-	<form action="">
-	  Enter date in yyyy-mm-dd:
-	  <input type="text" name="transactionDate">
-	  <input type="submit">
+	<form action="./StockGenerateReport">
+	  Enter date:
+	  <input type="date" name="transactionDate">
+	  <button onclick="generate()" type="submit">Submit</button>
 	</form>
 </div>
 
 <div id="generated">
-	
 </div>
+<!-- <script>
+function generate() {
+    document.getElementById("generated").innerHTML = "Report generated";
+}
+</script> -->
+	
 </body>
 </html>

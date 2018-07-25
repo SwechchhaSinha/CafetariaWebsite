@@ -1,12 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="x" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="CssForNavBar.css">
 <link rel="stylesheet" type="text/css" href="SideNavBar.css">
- 
-<title>Cafeteria</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Today's Menu</title>
 </head>
 <body>
 <div id="navbar">
@@ -15,13 +16,16 @@
   <a style="float:left"><span style="font-size:25px;cursor:pointer" onclick="openNav()">&#9776;</span></a> 
   
 </div>
-
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="./EmployeeJsp.jsp">Home</a>
   <a href="./DisplayMenuController">Daily Menu</a>
   <a href="./MonthlyExpenseController">Monthy Expense</a>
   <a href="#">Choose Add Ons</a>
   <a href="#">Opt for food</a>
+  <h2>Animated Sidenav Example</h2>
+
+
 </div>
 <script>
 window.onscroll = function() {myFunction()};
@@ -49,6 +53,6 @@ function closeNav() {
     document.body.style.backgroundColor = "white";
 }
 </script>
-<h1>hello</h1>
+<x:out value="${menu}"/>
 </body>
 </html>

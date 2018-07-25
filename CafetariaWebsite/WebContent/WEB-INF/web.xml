@@ -13,7 +13,7 @@
     <description></description>
     <display-name>FormInputServlet</display-name>
     <servlet-name>FormInputServlet</servlet-name>
-    <servlet-class>cafe.controller.FormInput</servlet-class>
+    <servlet-class>com.cafe.controller.FormInput</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>FormInputServlet</servlet-name>
@@ -21,6 +21,34 @@
   </servlet-mapping>
   <servlet>
     <description></description>
+    <display-name>StockGenerateReport</display-name>
+    <servlet-name>StockGenerateReport</servlet-name>
+    <servlet-class>com.cafe.controller.StockGenerateReport</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StockGenerateReport</servlet-name>
+    <url-pattern>/StockGenerateReport</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>StockTakeOut</display-name>
+    <servlet-name>StockTakeOut</servlet-name>
+    <servlet-class>com.cafe.controller.StockTakeOut</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StockTakeOut</servlet-name>
+    <url-pattern>/StockTakeOut</url-pattern>
+</servlet-mapping>
+<servlet>
+    <display-name>DisplayMenuController</display-name>
+    <servlet-name>DisplayMenuController</servlet-name>
+    <servlet-class>com.cafe.controller.DisplayMenuController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DisplayMenuController</servlet-name>
+    <url-pattern>/DisplayMenuController</url-pattern>
+  </servlet-mapping>
+  <servlet>
     <display-name>AllStock</display-name>
     <servlet-name>AllStock</servlet-name>
     <servlet-class>com.cafe.controller.AllStock</servlet-class>
@@ -28,5 +56,16 @@
   <servlet-mapping>
     <servlet-name>AllStock</servlet-name>
     <url-pattern>/AllStock</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>MonthlyExpenseController</display-name>
+    <servlet-name>MonthlyExpenseController</servlet-name>
+    <servlet-class>com.cafe.controller.MonthlyExpenseController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MonthlyExpenseController</servlet-name>
+    <url-pattern>/MonthlyExpenseController</url-pattern>
+
   </servlet-mapping>
 </web-app>

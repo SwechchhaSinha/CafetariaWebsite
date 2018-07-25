@@ -1,12 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="x" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="CssForNavBar.css">
 <link rel="stylesheet" type="text/css" href="SideNavBar.css">
- 
-<title>Cafeteria</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Current Month Food Expense</title>
 </head>
 <body>
 <div id="navbar">
@@ -18,6 +20,7 @@
 
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="./EmployeeJsp.jsp">Home</a>
   <a href="./DisplayMenuController">Daily Menu</a>
   <a href="./MonthlyExpenseController">Monthy Expense</a>
   <a href="#">Choose Add Ons</a>
@@ -49,6 +52,9 @@ function closeNav() {
     document.body.style.backgroundColor = "white";
 }
 </script>
-<h1>hello</h1>
+<jsp:useBean id="date" class="java.util.Date" />
+<h1>Your Expense for <x:out value="${sessionScope.month }"/>/<x:out value="${sessionScope.year}"/></h1>
+<x:out value="${sessionScope.expense}"/>
+
 </body>
 </html>
