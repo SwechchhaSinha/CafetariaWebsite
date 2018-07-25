@@ -23,9 +23,6 @@
   <a href="#">Monthy Expense</a>
   <a href="#">Choose Add Ons</a>
   <a href="#">Opt for food</a>
-  <h2>Animated Sidenav Example</h2>
-
-
 </div>
 <script>
 window.onscroll = function() {myFunction()};
