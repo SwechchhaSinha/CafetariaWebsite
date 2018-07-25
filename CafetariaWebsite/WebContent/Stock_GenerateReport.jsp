@@ -13,10 +13,7 @@
   <a class="active" href="javascript:void(0)">Logout</a>
   <a style="float:left"><span style="font-size:25px;cursor:pointer" onclick="openNav()">&#9776;</span></a>
   <!-- <a href="javascript:void(0)">Logout</a> -->
-  
 </div>
-
-
 <script>
 window.onscroll = function() {myFunction()};
 
@@ -53,15 +50,21 @@ function closeNav() {
 </div>
 <br>
 <div id="enterDate">
-	<form action="">
+	<form action="./StockGenerateReport">
 	  Enter date in yyyy-mm-dd:
 	  <input type="text" name="transactionDate">
-	  <input type="submit">
+	  <button onclick="generate()" type="submit">Submit</button>
 	</form>
 </div>
 
 <div id="generated">
-	
+
 </div>
+<script>
+function generate() {
+    document.getElementById("generated").innerHTML = "Report generated successfully.";
+}
+</script>
+	
 </body>
 </html>

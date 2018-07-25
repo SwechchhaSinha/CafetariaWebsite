@@ -19,4 +19,14 @@
     <servlet-name>FormInputServlet</servlet-name>
     <url-pattern>/InputServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>StockGenerateReport</display-name>
+    <servlet-name>StockGenerateReport</servlet-name>
+    <servlet-class>com.cafe.controller.StockGenerateReport</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StockGenerateReport</servlet-name>
+    <url-pattern>/StockGenerateReport</url-pattern>
+  </servlet-mapping>
 </web-app>
