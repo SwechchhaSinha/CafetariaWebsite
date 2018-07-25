@@ -19,4 +19,14 @@
     <servlet-name>FormInputServlet</servlet-name>
     <url-pattern>/InputServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AllStock</display-name>
+    <servlet-name>AllStock</servlet-name>
+    <servlet-class>com.cafe.controller.AllStock</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AllStock</servlet-name>
+    <url-pattern>/AllStock</url-pattern>
+  </servlet-mapping>
 </web-app>
