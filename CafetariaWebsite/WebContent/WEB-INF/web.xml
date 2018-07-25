@@ -29,4 +29,14 @@
     <servlet-name>StockGenerateReport</servlet-name>
     <url-pattern>/StockGenerateReport</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>StockTakeOut</display-name>
+    <servlet-name>StockTakeOut</servlet-name>
+    <servlet-class>com.cafe.controller.StockTakeOut</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StockTakeOut</servlet-name>
+    <url-pattern>/StockTakeOut</url-pattern>
+  </servlet-mapping>
 </web-app>

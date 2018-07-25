@@ -45,21 +45,11 @@ function closeNav() {
 </script>
 </div>
 <br>
-<div id="enterDate">
-	<form action="./StockGenerateReport">
-	  Enter date:
-	  <input type="date" name="transactionDate">
-	  <button onclick="generate()" type="submit">Submit</button>
-	</form>
-</div>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>  
+${sessionScope.msg}
+<!-- <a href="C:\Users\ve00ym016\report_" target="_blank">Click here to Download Report</a>
+<a href="file:///C:\Users\ve00ym016\">View file</a>  -->
+<a href="<c:out value="C:\Users\ve00ym016\report_${sessionScope.localDate}"/>" target="_blank">Click here to Download Report </a>
 
-<div id="generated">
-</div>
-<!-- <script>
-function generate() {
-    document.getElementById("generated").innerHTML = "Report generated";
-}
-</script> -->
-	
 </body>
 </html>
