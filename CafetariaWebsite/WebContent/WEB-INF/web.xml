@@ -13,10 +13,20 @@
     <description></description>
     <display-name>FormInputServlet</display-name>
     <servlet-name>FormInputServlet</servlet-name>
-    <servlet-class>cafe.controller.FormInput</servlet-class>
+    <servlet-class>com.cafe.controller.FormInput</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>FormInputServlet</servlet-name>
     <url-pattern>/InputServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DisplayMenuController</display-name>
+    <servlet-name>DisplayMenuController</servlet-name>
+    <servlet-class>com.cafe.controller.DisplayMenuController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DisplayMenuController</servlet-name>
+    <url-pattern>/DisplayMenuController</url-pattern>
   </servlet-mapping>
 </web-app>

@@ -13,11 +13,11 @@
 <p>Please fill in this form to create an account.</p>
 </div>
 <div>
-<form class="container" method="post" style="border:1px solid #ccc">
+<form class="container" method="post" style="border:1px solid #ccc" action="./InputServlet">
 Enter Your EIN :<br><br><input type="text" name="ein" placeholder="Enter EIN"  required><br><br>
 Enter Your First Name :<br><br><input type="text" name="name" placeholder="Enter First Name"  required><br><br>
-Do you want to opt for food :<br><br><input type="radio" name="opt_status" value="Yes">Yes<br><br>
-									 <input type="radio" name="opt_status" value="No">No<br><br>
+Do you want to opt for food :<br><br><input type="radio" name="opt_status" value="Y">Yes<br><br>
+									 <input type="radio" name="opt_status" value="N">No<br><br>
 Enter Your Password :<br><br><input type="password" name="password" placeholder="Enter Password"  required><br><br>
 <input type="submit" value="Submit">
 </form>
