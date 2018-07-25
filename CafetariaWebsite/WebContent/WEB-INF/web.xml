@@ -38,4 +38,14 @@
     <servlet-name>AllStock</servlet-name>
     <url-pattern>/AllStock</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>MonthlyExpenseController</display-name>
+    <servlet-name>MonthlyExpenseController</servlet-name>
+    <servlet-class>com.cafe.controller.MonthlyExpenseController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MonthlyExpenseController</servlet-name>
+    <url-pattern>/MonthlyExpenseController</url-pattern>
+  </servlet-mapping>
 </web-app>

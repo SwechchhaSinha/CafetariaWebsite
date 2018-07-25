@@ -18,9 +18,8 @@
 
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="#">Home</a>
   <a href="./DisplayMenuController">Daily Menu</a>
-  <a href="#">Monthy Expense</a>
+  <a href="./MonthlyExpenseController">Monthy Expense</a>
   <a href="#">Choose Add Ons</a>
   <a href="#">Opt for food</a>
 </div>
@@ -50,5 +49,6 @@ function closeNav() {
     document.body.style.backgroundColor = "white";
 }
 </script>
+<h1>hello</h1>
 </body>
 </html>
