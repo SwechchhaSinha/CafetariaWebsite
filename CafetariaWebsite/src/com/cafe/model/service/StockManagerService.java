@@ -13,7 +13,7 @@ import com.cafe.model.beans.Transaction;
 public interface StockManagerService {
 
 	
-	List<Food> displayFood() throws ClassNotFoundException, SQLException;
+	ArrayList<Food> displayFood() throws ClassNotFoundException, SQLException;
 
 	List<Food> displayFood(String category) throws ClassNotFoundException, SQLException;
 

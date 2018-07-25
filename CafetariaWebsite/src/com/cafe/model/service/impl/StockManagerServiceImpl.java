@@ -108,7 +108,8 @@ public class StockManagerServiceImpl implements StockManagerService {
 	}
 
 	@Override
-	public List<Food> displayFood() throws ClassNotFoundException, SQLException {
+	public ArrayList<Food> displayFood() throws ClassNotFoundException, SQLException {
+		//System.out.println(foodDaoImpl.listAllFood());
 		return (foodDaoImpl.listAllFood());
 	}
 

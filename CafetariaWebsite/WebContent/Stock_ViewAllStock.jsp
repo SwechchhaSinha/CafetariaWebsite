@@ -27,7 +27,7 @@
     <i class="fa fa-caret-down"></i>
   </button>
   <div class="dropdown-container">
-    <a href="#">All</a>
+    <a href="./AllStock.java">All</a>
     <a href="#">Category wise</a>
     
   </div>
@@ -39,6 +39,7 @@
 </div>
 <h1>gfshgxsha</h1>
 <%=session.getAttribute("Stock") %>
+
 <x:forEach var="food" items="${sessionScope.Stock}" >
 <x:out value="${food.F_id }"></x:out>
 </x:forEach>

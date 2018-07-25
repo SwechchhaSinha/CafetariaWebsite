@@ -14,7 +14,7 @@ import com.cafe.model.helper.ConnectionHelper;
 public class FoodDaoImpl implements FoodDao {
 
 	@Override
-	public List<Food> listAllFood() throws ClassNotFoundException, SQLException {
+	public ArrayList<Food> listAllFood() throws ClassNotFoundException, SQLException {
 		Connection conn = ConnectionHelper.getConnection();
 		Statement statement = conn.createStatement();
 		ArrayList<Food> foodList = new ArrayList<>();

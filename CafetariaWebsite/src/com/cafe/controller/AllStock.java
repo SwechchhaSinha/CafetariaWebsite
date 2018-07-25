@@ -1,7 +1,9 @@
 package com.cafe.controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -29,9 +31,13 @@ public class AllStock extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		StockManagerService service=new StockManagerServiceImpl();
 		try {
-			List<Food> stock=service.displayFood();
+			PrintWriter out=response.getWriter();
+			
+			ArrayList<Food> stock=service.displayFood();
+			out.println(stock);
 			HttpSession session=request.getSession();
 			session.setAttribute("Stock", stock);
+			response.sendRedirect("Stock_ViewAll.jsp");
 		} catch (ClassNotFoundException | SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
