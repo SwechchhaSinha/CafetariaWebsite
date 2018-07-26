@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>  
 <!DOCTYPE html >
 <html>
 <head>
@@ -7,7 +8,7 @@
 <link rel="stylesheet" href="SideNavBar.css">
 <title>Welcome to CMS</title>
 </head>
-<body onload="myFunction()">
+<body>
 
 <div id="navbar">
   <a class="active" href="javascript:void(0)">Logout</a>
@@ -45,20 +46,12 @@ function closeNav() {
 </script>
 </div>
 <br>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>  
-${sessionScope.msg}
-<!-- <a href="C:\Users\ve00ym016\report_" target="_blank">Click here to Download Report</a>
-<a href="file:///C:\Users\ve00ym016\">View file</a>  -->
-<c:set var="filePath" scope="session" value=""></c:set>
+${sessionScope.msgTakeOut}
+ <%-- <c:set var = "msgTakeOut"  scope = "session" value = "${sessionScope.msgTakeOut}"/> --%>
+<!--  <script type="text/javascript">
+ 	alert(msgTakeOut);
+ </script> -->
 
-<a href="<c:url value="ur"/>" target="_blank">Click here to Download Report </a>
-<a id="abc" href="">Click me</a>
-<script type="text/javascript">
- function myFunction()
- {
-document.getElementById("abc").setAttribute("href",<%= "C:\\Users\\ve00ym016\\report_"+session.getAttribute("localDate")%>);
- }
- </script>
 
 </body>
 </html>

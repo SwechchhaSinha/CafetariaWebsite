@@ -34,7 +34,7 @@ function myFunction() {
   <a href="Stock_GenerateReport.jsp">Generate Report</a>
   <a href="#">Update Stock</a>
   <a href="#">Update Menu</a>
-  <a href="Stock_TakeOut">Take out stock</a>
+  <a href="Stock_TakeOut.jsp">Take out stock</a>
 <script>
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
@@ -46,9 +46,12 @@ function closeNav() {
 </div>
 <br>
 <div id="TakeOutStock">
+	Present stock details:<br><br>
+	<!-- write code for display all table -->
+	For taking out stock please:<br><br>
 	<form action="./StockTakeOut">
-	  Enter Food Id: <input type="text" name="foodId">
-	  Enter Quantity: <input type="text" name="quantity">
+	  Enter Food Id: <input type="text" name="foodId"><br><br>
+	  Enter Quantity: <input type="text" name="quantity"><br><br>
 	  <input type="Submit">
 	</form>
 </div>
