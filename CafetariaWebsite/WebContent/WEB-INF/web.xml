@@ -38,8 +38,8 @@
   <servlet-mapping>
     <servlet-name>StockTakeOut</servlet-name>
     <url-pattern>/StockTakeOut</url-pattern>
-</servlet-mapping>
-<servlet>
+  </servlet-mapping>
+  <servlet>
     <display-name>DisplayMenuController</display-name>
     <servlet-name>DisplayMenuController</servlet-name>
     <servlet-class>com.cafe.controller.DisplayMenuController</servlet-class>
@@ -66,6 +66,25 @@
   <servlet-mapping>
     <servlet-name>MonthlyExpenseController</servlet-name>
     <url-pattern>/MonthlyExpenseController</url-pattern>
-
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>StockByCategory</display-name>
+    <servlet-name>StockByCategory</servlet-name>
+    <servlet-class>com.cafe.controller.StockByCategory</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StockByCategory</servlet-name>
+    <url-pattern>/StockByCategory</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>StockByCategoryResult</display-name>
+    <servlet-name>StockByCategoryResult</servlet-name>
+    <servlet-class>com.cafe.controller.StockByCategoryResult</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StockByCategoryResult</servlet-name>
+    <url-pattern>/StockByCategoryResult</url-pattern>
   </servlet-mapping>
 </web-app>

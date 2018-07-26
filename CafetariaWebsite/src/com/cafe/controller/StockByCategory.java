@@ -19,10 +19,10 @@ import com.cafe.model.service.impl.StockManagerServiceImpl;
 /**
  * Servlet implementation class AllStock
  */
-public class AllStock extends HttpServlet {
+public class StockByCategory extends HttpServlet {
 	private static final long serialVersionUID = 1L;
    
-    public AllStock() {
+    public StockByCategory() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -32,12 +32,10 @@ public class AllStock extends HttpServlet {
 		StockManagerService service=new StockManagerServiceImpl();
 		try {
 			PrintWriter out=response.getWriter();
-			
-			ArrayList<Food> stock=service.displayFood();
-			out.println(stock);
+			ArrayList<String> stock=service.listCategory();
 			HttpSession session=request.getSession();
-			session.setAttribute("Stock", stock);
-			response.sendRedirect("./Stock_ViewAllStock.jsp");
+			session.setAttribute("StockCategory", stock);
+			response.sendRedirect("./Stock_ChooseStockCategory.jsp");
 		} catch (ClassNotFoundException | SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

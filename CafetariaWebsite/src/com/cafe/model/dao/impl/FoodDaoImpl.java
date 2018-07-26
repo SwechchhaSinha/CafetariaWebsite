@@ -14,7 +14,7 @@ import com.cafe.model.helper.ConnectionHelper;
 public class FoodDaoImpl implements FoodDao {
 
 	@Override
-	public List<Food> listAllFood() throws ClassNotFoundException, SQLException {
+	public ArrayList<Food> listAllFood() throws ClassNotFoundException, SQLException {
 		Connection conn = ConnectionHelper.getConnection();
 		Statement statement = conn.createStatement();
 		ArrayList<Food> foodList = new ArrayList<>();
@@ -120,6 +120,19 @@ public class FoodDaoImpl implements FoodDao {
 			return false;
 		else
 			return true;
+	}
+
+	@Override
+	public ArrayList<String> listCategory() throws ClassNotFoundException, SQLException {
+		Connection conn = ConnectionHelper.getConnection();
+		ArrayList<String> categories=new ArrayList<>();
+		PreparedStatement statement=conn.prepareStatement("select distinct(category) from food_item");
+		ResultSet resultSet=statement.executeQuery();
+		while(resultSet.next())
+		{
+			categories.add(resultSet.getString(1));
+		}
+		return categories;
 	}
 
 }
