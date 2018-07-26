@@ -34,5 +34,5 @@ public interface StockManagerService {
 
 
 	boolean generateReport(LocalDate date) throws ClassNotFoundException, SQLException, IOException;
-
+	ArrayList<String> listCategory() throws ClassNotFoundException, SQLException;
 }

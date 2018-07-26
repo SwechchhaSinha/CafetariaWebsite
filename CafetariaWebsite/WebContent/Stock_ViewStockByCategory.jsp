@@ -1,10 +1,29 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="x" %> 
+    
 <!DOCTYPE html >
 <html>
 <head>
 <link rel="stylesheet" href="CssForNavBar.css">
 <link rel="stylesheet" href="SideNavBar.css">
+<style type="text/css">
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
 <title>Welcome to CMS</title>
 </head>
 <body>
@@ -26,7 +45,7 @@
   </button>
   <div class="dropdown-container">
     <a href="./AllStock">All</a>
-    <a href="./StockByCategory">Category wise</a>
+    <a href="#">Category wise</a>
     
   </div>
   <a href="Stock_GenerateReport.jsp">Generate Report</a>
@@ -34,7 +53,22 @@
   <a href="#">Update Menu</a>
   <a href="#">Take out stock</a>
 
+</div>
+<table>
+ <tr>
+    <th>STOCK ID</th>
+    <th>STOCK NAME</th>
+    <th>QUANTITY</th>
+  </tr>
+<x:forEach var="food" items="${sessionScope.StockByCategory}" >
+<tr>
+<td><x:out value="${food.f_id }"></x:out></td>
+<td><x:out value="${food.f_name }"></x:out></td>
+<td><x:out value="${food.quantity }"></x:out></td>
+</tr>
 
+</x:forEach>
+</table>
 <script>
 window.onscroll = function() {myFunction()};
 
@@ -72,11 +106,8 @@ for (i = 0; i < dropdown.length; i++) {
   });
 }
 </script>
-</div>
-<br>
-<h1>Welcome to Cafetaria Management System</h1>
 
-	
+<br>
 
 </body>
 </html>

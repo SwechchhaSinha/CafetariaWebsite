@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="stock" %> 
 <!DOCTYPE html >
 <html>
 <head>
@@ -33,6 +34,20 @@
   <a href="#">Update Stock</a>
   <a href="#">Update Menu</a>
   <a href="#">Take out stock</a>
+</div>
+
+
+<form action="./StockByCategoryResult">
+Choose Category :
+<select name="category">
+<stock:forEach var="cat" items="${sessionScope.StockCategory}" >
+<option value="${cat }">
+${cat}
+</option>
+</stock:forEach>
+</select>
+<input type="submit" value="View List">
+</form>
 
 
 <script>
@@ -72,11 +87,7 @@ for (i = 0; i < dropdown.length; i++) {
   });
 }
 </script>
-</div>
-<br>
-<h1>Welcome to Cafetaria Management System</h1>
 
-	
 
 </body>
 </html>

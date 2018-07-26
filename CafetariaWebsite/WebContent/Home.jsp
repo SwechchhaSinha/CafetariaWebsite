@@ -6,7 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>hello</title>
 </head>
-<body style="background-image: https://media.giphy.com/media/xjIlOkfEw6JjB0Xs6U/giphy.gif">
+<body>
+
+<img alt="logo" src="https://media.giphy.com/media/xjIlOkfEw6JjB0Xs6U/giphy.gif" style="width: 50%;">
+
+<img alt="sign up" src="./sign-up-here.png" style="float: right; height: 50%">
+<img alt="sign up" src="./1370146_orig.png" style="float: right; height: 50%">
 
 </body>
 </html>

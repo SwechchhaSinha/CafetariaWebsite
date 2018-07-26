@@ -124,4 +124,9 @@ public class StockManagerServiceImpl implements StockManagerService {
 
 		return foodDaoImpl.deleteFood(foodId);
 	}
+
+	@Override
+	public ArrayList<String> listCategory() throws ClassNotFoundException, SQLException {
+		return foodDaoImpl.listCategory();
+	}
 }

@@ -11,5 +11,5 @@ public interface FoodDao {
 	boolean insertFood(Food food) throws SQLException, ClassNotFoundException;
 	boolean updateFoodQuantity(String food_id,int qty) throws ClassNotFoundException, SQLException;
 	boolean deleteFood(String food_id) throws ClassNotFoundException, SQLException;
-
+	ArrayList<String> listCategory() throws ClassNotFoundException, SQLException;
 }
