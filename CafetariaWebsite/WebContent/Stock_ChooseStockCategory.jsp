@@ -31,9 +31,9 @@
     
   </div>
   <a href="Stock_GenerateReport.jsp">Generate Report</a>
-  <a href="#">Update Stock</a>
+  <a href="Stock_Update.jsp">Update Stock</a>
   <a href="#">Update Menu</a>
-  <a href="#">Take out stock</a>
+  <a href="Stock_TakeOut.jsp">Take out stock</a>
 </div>
 
 

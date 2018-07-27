@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="stock" %> 
 <!DOCTYPE html >
 <html>
 <head>
@@ -8,7 +9,6 @@
 <title>Welcome to CMS</title>
 </head>
 <body>
-
 <div id="navbar">
   <a class="active" href="javascript:void(0)">Logout</a>
   <a style="float:left"><span style="font-size:25px;cursor:pointer" onclick="openNav()">&#9776;</span></a>
@@ -41,6 +41,13 @@
   </div>
   <a href="#">Update Menu</a>
   <a href="Stock_TakeOut.jsp">Take out stock</a>
+
+
+<form action="./">
+
+
+<input type="submit" value="">
+</form>
 
 
 <script>
@@ -80,11 +87,7 @@ for (i = 0; i < dropdown.length; i++) {
   });
 }
 </script>
-</div>
-<br>
-<h1>Welcome to Cafetaria Management System</h1>
 
-	
 
 </body>
 </html>
