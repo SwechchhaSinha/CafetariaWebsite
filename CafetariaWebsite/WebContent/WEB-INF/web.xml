@@ -87,4 +87,44 @@
     <servlet-name>StockByCategoryResult</servlet-name>
     <url-pattern>/StockByCategoryResult</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AddOnAddController</display-name>
+    <servlet-name>AddOnAddController</servlet-name>
+    <servlet-class>com.cafe.controller.AddOnAddController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddOnAddController</servlet-name>
+    <url-pattern>/AddOnAddController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>OptFood</display-name>
+    <servlet-name>OptFood</servlet-name>
+    <servlet-class>com.cafe.controller.OptFood</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>OptFood</servlet-name>
+    <url-pattern>/OptFood</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>OptingFood</display-name>
+    <servlet-name>OptingFood</servlet-name>
+    <servlet-class>com.cafe.controller.OptingFood</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>OptingFood</servlet-name>
+    <url-pattern>/OptingFood</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>LoginController</display-name>
+    <servlet-name>LoginController</servlet-name>
+    <servlet-class>com.cafe.controller.LoginController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginController</servlet-name>
+    <url-pattern>/LoginController</url-pattern>
+  </servlet-mapping>
 </web-app>

@@ -4,29 +4,26 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="CssForNavBar.css">
-<link rel="stylesheet" type="text/css" href="SideNavBar.css">
+<link rel="stylesheet" type="text/css"
+	href="<x:url value="./CssForNavBar.css"/>">
+<link rel="stylesheet" type="text/css"
+	href="<x:url value="./SideNavBar.css"/>">
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Today's Menu</title>
 </head>
-<body>
+<body style="marin:auto; text-align: center;">
 <div id="navbar">
-  <a class="active" href="javascript:void(0)">Home</a>
   <a href="javascript:void(0)">Logout</a>
   <a style="float:left"><span style="font-size:25px;cursor:pointer" onclick="openNav()">&#9776;</span></a> 
   
 </div>
 <div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="./EmployeeJsp.jsp">Home</a>
-  <a href="./DisplayMenuController">Daily Menu</a>
-  <a href="./MonthlyExpenseController">Monthy Expense</a>
-  <a href="#">Choose Add Ons</a>
-  <a href="#">Opt for food</a>
-  <h2>Animated Sidenav Example</h2>
-
-
-</div>
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<a href="./EmployeeJsp.jsp">Home</a> <a href="./DisplayMenuController">Daily
+			Menu</a> <a href="./MonthlyExpenseController">Monthy Expense</a> <a
+			href="./AddOn.jsp">Choose Add Ons</a> <a href="./OptFood">Opt for
+			food</a>
+	</div>
 <script>
 window.onscroll = function() {myFunction()};
 
@@ -53,6 +50,8 @@ function closeNav() {
     document.body.style.backgroundColor = "white";
 }
 </script>
+<div id="main">
 <x:out value="${menu}"/>
+</div>
 </body>
 </html>
