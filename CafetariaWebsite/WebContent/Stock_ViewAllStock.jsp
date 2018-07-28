@@ -38,11 +38,14 @@
 
 </div>
 <h1>gfshgxsha</h1>
-<%=session.getAttribute("Stock") %>
-
+<%=session.getId() %>
+<%=session.isNew() %>
+${sessionScope.Stock}
+ <%=session.getAttribute("Stock") %>
+<!-- 
 <x:forEach var="food" items="${sessionScope.Stock}" >
 <x:out value="${food.F_id }"></x:out>
-</x:forEach>
+</x:forEach>-->
 <script>
 window.onscroll = function() {myFunction()};
 

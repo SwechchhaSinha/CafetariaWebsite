@@ -6,6 +6,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -33,12 +34,15 @@ public class AllStock extends HttpServlet {
 		try {
 			PrintWriter out=response.getWriter();
 			
-			ArrayList<Food> stock=service.displayFood();
-			out.println(stock);
+//			ArrayList<Food> stock=service.displayFood();
+//			out.println(stock);
 			HttpSession session=request.getSession();
-			session.setAttribute("Stock", stock);
-			response.sendRedirect("Stock_ViewAll.jsp");
-		} catch (ClassNotFoundException | SQLException e) {
+			request.setAttribute("abc", "wdwddd");
+			session.setAttribute("Stock", "gkjks");
+			RequestDispatcher dispatcher=request.getRequestDispatcher("./Stock_ViewAll.jsp");
+			dispatcher.forward(request, response);
+//			response.sendRedirect("./Stock_ViewAll.jsp");
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
