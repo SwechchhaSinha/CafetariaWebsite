@@ -31,7 +31,7 @@
 		<table border="1" style="margin:auto;">
 			<tr>
 				<th>Add On ID</th>
-				<th>Add On Name</th>//
+				<th>Add On Name</th>
 				<th>Remaining Quantity</th>
 				<th>Price per Unit</th>
 				<x:forEach var="addOn" items="${addOn}">
