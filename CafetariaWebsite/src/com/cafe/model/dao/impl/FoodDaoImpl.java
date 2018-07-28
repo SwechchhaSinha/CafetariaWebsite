@@ -122,4 +122,17 @@ public class FoodDaoImpl implements FoodDao {
 			return true;
 	}
 
+	@Override
+	public ArrayList<String> listCategory() throws ClassNotFoundException, SQLException {
+		Connection conn = ConnectionHelper.getConnection();
+		ArrayList<String> categories=new ArrayList<>();
+		PreparedStatement statement=conn.prepareStatement("select distinct(category) from food_item");
+		ResultSet resultSet=statement.executeQuery();
+		while(resultSet.next())
+		{
+			categories.add(resultSet.getString(1));
+		}
+		return categories;
+	}
+
 }

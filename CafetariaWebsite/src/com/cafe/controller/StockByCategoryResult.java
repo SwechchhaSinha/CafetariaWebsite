@@ -6,7 +6,6 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -20,10 +19,10 @@ import com.cafe.model.service.impl.StockManagerServiceImpl;
 /**
  * Servlet implementation class AllStock
  */
-public class AllStock extends HttpServlet {
+public class StockByCategoryResult extends HttpServlet {
 	private static final long serialVersionUID = 1L;
    
-    public AllStock() {
+    public StockByCategoryResult() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -34,14 +33,12 @@ public class AllStock extends HttpServlet {
 		try {
 			PrintWriter out=response.getWriter();
 			
-			ArrayList<Food> stock=service.displayFood();
-//			out.println(stock);
+			List<Food> stock=service.displayFood(request.getParameter("category"));
+			out.println(stock);
 			HttpSession session=request.getSession();
-
-			session.setAttribute("Stock", stock);
-			response.sendRedirect("./Stock_ViewAllStock.jsp");
+			session.setAttribute("StockByCategory", stock);
+			response.sendRedirect("./Stock_ViewStockByCategory.jsp");
 		} catch (ClassNotFoundException | SQLException e) {
-
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}

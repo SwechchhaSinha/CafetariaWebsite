@@ -7,6 +7,23 @@
 <head>
 <link rel="stylesheet" href="CssForNavBar.css">
 <link rel="stylesheet" href="SideNavBar.css">
+<style type="text/css">
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
 <title>Welcome to CMS</title>
 </head>
 <body>
@@ -27,7 +44,7 @@
     <i class="fa fa-caret-down"></i>
   </button>
   <div class="dropdown-container">
-    <a href="./AllStock.java">All</a>
+    <a href="./AllStock">All</a>
     <a href="#">Category wise</a>
     
   </div>
@@ -37,6 +54,7 @@
   <a href="#">Take out stock</a>
 
 </div>
+<<<<<<< HEAD
 <h1>gfshgxsha</h1>
 <%=session.getId() %>
 <%=session.isNew() %>
@@ -46,6 +64,25 @@ ${sessionScope.Stock}
 <x:forEach var="food" items="${sessionScope.Stock}" >
 <x:out value="${food.F_id }"></x:out>
 </x:forEach>-->
+=======
+<table>
+ <tr>
+    <th>STOCK ID</th>
+    <th>STOCK NAME</th>
+    <th>CATEGORY</th>
+    <th>QUANTITY</th>
+  </tr>
+<x:forEach var="food" items="${sessionScope.StockCategory}" >
+<tr>
+<td><x:out value="${food.f_id }"></x:out></td>
+<td><x:out value="${food.f_name }"></x:out></td>
+<td><x:out value="${food.category }"></x:out></td>
+<td><x:out value="${food.quantity }"></x:out></td>
+</tr>
+
+</x:forEach>
+</table>
+>>>>>>> refs/remotes/origin/master
 <script>
 window.onscroll = function() {myFunction()};
 
