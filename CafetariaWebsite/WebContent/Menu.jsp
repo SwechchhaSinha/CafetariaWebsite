@@ -23,7 +23,7 @@
 			Menu</a> <a href="./MonthlyExpenseController">Monthy Expense</a> <a
 			href="./AddOn.jsp">Choose Add Ons</a> <a href="./OptFood">Opt for
 			food</a>
-	</div>
+			</div>
 <script>
 window.onscroll = function() {myFunction()};
 
@@ -50,7 +50,7 @@ function closeNav() {
     document.body.style.backgroundColor = "white";
 }
 </script>
-<div id="main">
+<div id="main" style="vertical-align: middle;">
 <x:out value="${menu}"/>
 </div>
 </body>

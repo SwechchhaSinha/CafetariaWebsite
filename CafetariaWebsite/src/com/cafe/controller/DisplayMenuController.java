@@ -25,7 +25,7 @@ public class DisplayMenuController extends HttpServlet {
 		HttpSession session=request.getSession(false);
 		try {
 			Menu menu=service.displayMenu();
-			session.setAttribute("menu", menu);
+			request.setAttribute("menu", menu);
 			response.sendRedirect("./Menu.jsp");
 		} catch (ClassNotFoundException | SQLException e) {
 			// TODO Auto-generated catch block

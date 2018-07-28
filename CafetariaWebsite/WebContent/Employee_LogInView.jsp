@@ -7,10 +7,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 </head>
-<body style="marin:auto; text-align: center;">
+<body style="margin:auto; text-align: center;">
 <h1 >Error Wrong Login Credentials</h1>
 <x:choose> 
-	<x:when test="${request.failure='Please enter correct password'}">
+	<x:when test="${requestScope.failure='Please enter correct password'}">
 		<x:out value="${requestScope.failure}"/>
 		<a href="<x:url value="/EmployeeLogin.jsp"/>">Go To Login page</a>
 	</x:when>

@@ -14,8 +14,8 @@
 <body >
 
 	<div id="navbar">
-		<a href="javascript:void(0)">Logout</a> <a style="float: left"><span
-			style="font-size: 25px; cursor: pointer" onclick="openNav()">&#9776;</span></a>
+		<a href="javascript:void(0)">Logout</a> <a style="float: left">
+		<span style="font-size: 25px; cursor: pointer" onclick="openNav()">&#9776;</span></a>
 
 	</div>
 	<div id="mySidenav" class="sidenav">
@@ -37,7 +37,7 @@
 				<p>Today's Menu is :</p>
 				<br>
 				<br>
-				<x:out value="${menu}" />
+				<x:out value="${sessionScope.menu}" />
 				<br>
 				<br>
 				<p>Do you want to opt for food??</p>
@@ -51,5 +51,35 @@
 			</x:otherwise>
 		</x:choose>
 	</div>
+	
+	<script>
+		window.onscroll = function() {
+			myFunction()
+		};
+
+		var navbar = document.getElementById("navbar");
+		var sticky = navbar.offsetTop;
+
+		function myFunction() {
+			if (window.pageYOffset >= sticky) {
+				navbar.classList.add("sticky")
+			} else {
+				navbar.classList.remove("sticky");
+			}
+		}
+		function openNav() {
+			document.getElementById("mySidenav").style.width = "250px";
+			document.getElementById("main").style.marginLeft = "250px";
+			document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+		}
+
+		/* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
+		function closeNav() {
+			document.getElementById("mySidenav").style.width = "0";
+			document.getElementById("main").style.marginLeft = "0";
+			document.body.style.backgroundColor = "white";
+		}
+	</script>
+	
 </body>
 </html>

@@ -29,7 +29,6 @@ public class AddOnAddController extends HttpServlet {
 		HttpSession session = request.getSession(false);
 		String selectedItemId = request.getParameter("AddOnChoice");
 		EmployeeServiceImpl service = new EmployeeServiceImpl();
-		System.out.println(selectedItemId);
 		AddOn addon;
 		int price = 0;
 		try {

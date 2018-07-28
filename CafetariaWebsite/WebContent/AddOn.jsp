@@ -26,9 +26,9 @@
 			food</a>
 	</div>
 	<div id="main">
-		<h1>Available Add Ons Stock :</h1>
-		<h1>Select Your Add Ons</h1>
-		<table border="1" style="margin:auto;">
+		<br><br><h1>Available Add Ons Stock :</h1>
+		<h1>Select Your Add Ons</h1><br><br>
+		<table id="customers" border=1 style="margin:auto;">
 			<tr>
 				<th>Add On ID</th>
 				<th>Add On Name</th>

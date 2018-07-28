@@ -38,6 +38,7 @@ public class LoginController extends HttpServlet {
 				session=request.getSession();
 				session.setAttribute("ein", ein);
 				session.setAttribute("addOn", service.addON());
+				session.setAttribute("menu", service.displayMenu());
 				response.sendRedirect("./EmployeeJsp.jsp");
 			}
 			else if(result.equals("Please enter correct password"))
