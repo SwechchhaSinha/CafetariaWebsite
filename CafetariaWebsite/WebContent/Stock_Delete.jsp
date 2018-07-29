@@ -84,9 +84,10 @@ for (i = 0; i < dropdown.length; i++) {
 </script>
 </div>
 <br>
-<h1>Welcome to Cafetaria Management System</h1>
-
-	
-
+<form action="./StockUpdate3">
+Please Enter the food ID to delete: 
+<br><br><input type="text" name="foodId" >
+<br><br><input type="submit">
+</form>
 </body>
 </html>

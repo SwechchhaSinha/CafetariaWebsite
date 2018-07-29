@@ -127,4 +127,34 @@
     <servlet-name>LoginController</servlet-name>
     <url-pattern>/LoginController</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>StockUpdate1</display-name>
+    <servlet-name>StockUpdate1</servlet-name>
+    <servlet-class>com.cafe.controller.StockUpdate1</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StockUpdate1</servlet-name>
+    <url-pattern>/StockUpdate1</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>StockUpdate2</display-name>
+    <servlet-name>StockUpdate2</servlet-name>
+    <servlet-class>com.cafe.controller.StockUpdate2</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StockUpdate2</servlet-name>
+    <url-pattern>/StockUpdate2</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>StockUpdate3</display-name>
+    <servlet-name>StockUpdate3</servlet-name>
+    <servlet-class>com.cafe.controller.StockUpdate3</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StockUpdate3</servlet-name>
+    <url-pattern>/StockUpdate3</url-pattern>
+  </servlet-mapping>
 </web-app>

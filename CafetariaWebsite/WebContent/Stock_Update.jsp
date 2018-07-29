@@ -84,9 +84,15 @@ for (i = 0; i < dropdown.length; i++) {
 </script>
 </div>
 <br>
-<h1>Welcome to Cafetaria Management System</h1>
+<form action="./StockUpdate2">
+Please Enter the following details: 
+<br><br>FoodId: <input type="text" name="foodId" >
+<br><br> Quanity:<input type="text" name="quantity">
+<br><br> Price:<input type="text" name="price">
+<br><br><input type="submit">
 
-	
 
+
+</form>
 </body>
 </html>

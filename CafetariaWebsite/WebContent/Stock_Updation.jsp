@@ -84,9 +84,7 @@ for (i = 0; i < dropdown.length; i++) {
 </script>
 </div>
 <br>
-<h1>Welcome to Cafetaria Management System</h1>
-
-	
-
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>  
+${sessionScope.updateMsg}
 </body>
 </html>
