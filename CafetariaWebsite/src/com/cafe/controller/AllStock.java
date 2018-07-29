@@ -36,7 +36,7 @@ public class AllStock extends HttpServlet {
 			
 			ArrayList<Food> stock=service.displayFood();
 //			out.println(stock);
-			HttpSession session=request.getSession();
+			HttpSession session=request.getSession(false);
 
 			session.setAttribute("Stock", stock);
 			response.sendRedirect("./Stock_ViewAllStock.jsp");

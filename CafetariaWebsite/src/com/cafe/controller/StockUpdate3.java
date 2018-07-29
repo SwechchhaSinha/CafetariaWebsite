@@ -13,7 +13,7 @@ import com.cafe.model.service.impl.StockManagerServiceImpl;
 public class StockUpdate3 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		HttpSession session = request.getSession();
+		HttpSession session = request.getSession(false);
 		StockManagerServiceImpl sms = new StockManagerServiceImpl();
 		String fId = request.getParameter("foodId");
 		String deleteMsg="";

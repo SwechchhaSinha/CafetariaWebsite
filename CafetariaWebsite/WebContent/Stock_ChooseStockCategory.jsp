@@ -31,9 +31,18 @@
     
   </div>
   <a href="Stock_GenerateReport.jsp">Generate Report</a>
-  <a href="#">Update Stock</a>
+   <button class="dropdown-btn">Update Stock 
+    <i class="fa fa-caret-down"></i>
+  </button>
+ <div class="dropdown-container">
+	    <a href="./Stock_Insert.jsp">Insert</a>
+	    <a href="./Stock_Update.jsp">Update</a>
+	    <a href="./Stock_Delete.jsp">Delete</a>
+</div>
+  <!-- <a href="#">Update Stock</a> -->
   <a href="#">Update Menu</a>
-  <a href="#">Take out stock</a>
+  <a href="Stock_TakeOut.jsp">Take out stock</a>
+
 </div>
 
 

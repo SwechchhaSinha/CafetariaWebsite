@@ -69,7 +69,7 @@ body, html {
   </div>
   <div class="rightpane">
   <div class="rightpane" style="height: 12%;width: 100%"></div>
- <a href="Employee_LogInView.jsp"> <img alt="sign up" src="./1370146_orig.png" style="width: 100%;height: 70%"></a>
+ <a href="EmployeeLogin.jsp"> <img alt="sign up" src="./1370146_orig.png" style="width: 100%;height: 70%"></a>
   
   </div>
    

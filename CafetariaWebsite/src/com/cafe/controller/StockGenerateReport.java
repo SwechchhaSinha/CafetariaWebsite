@@ -16,7 +16,7 @@ import com.cafe.model.service.impl.StockManagerServiceImpl;
 public class StockGenerateReport extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		HttpSession session = request.getSession();
+		HttpSession session = request.getSession(false);
 		String date = request.getParameter("transactionDate");
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 		LocalDate localDate = LocalDate.parse(date, formatter);

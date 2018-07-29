@@ -35,7 +35,7 @@ public class StockByCategoryResult extends HttpServlet {
 			
 			List<Food> stock=service.displayFood(request.getParameter("category"));
 			out.println(stock);
-			HttpSession session=request.getSession();
+			HttpSession session=request.getSession(false);
 			session.setAttribute("StockByCategory", stock);
 			response.sendRedirect("./Stock_ViewStockByCategory.jsp");
 		} catch (ClassNotFoundException | SQLException e) {

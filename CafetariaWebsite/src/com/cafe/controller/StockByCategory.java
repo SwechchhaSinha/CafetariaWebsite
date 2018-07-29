@@ -33,7 +33,7 @@ public class StockByCategory extends HttpServlet {
 		try {
 			PrintWriter out=response.getWriter();
 			ArrayList<String> stock=service.listCategory();
-			HttpSession session=request.getSession();
+			HttpSession session=request.getSession(false);
 			session.setAttribute("StockCategory", stock);
 			response.sendRedirect("./Stock_ChooseStockCategory.jsp");
 		} catch (ClassNotFoundException | SQLException e) {

@@ -6,8 +6,12 @@
 <link rel="stylesheet" href="CssForNavBar.css">
 <link rel="stylesheet" href="SideNavBar.css">
 <title>Welcome to CMS</title>
+<link href='https://fonts.googleapis.com/css?family=Berkshire Swash' rel='stylesheet'>
 </head>
-<body>
+<body style="text-align: center; background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg/1200px-Good_Food_Display_-_NCI_Visuals_Online.jpg'); 
+ background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Berkshire Swash';font-size: 30px;">
 
 <div id="navbar">
   <a class="active" href="javascript:void(0)">Logout</a>
@@ -84,7 +88,9 @@ for (i = 0; i < dropdown.length; i++) {
 </script>
 </div>
 <br>
-<h1>Welcome to Cafetaria Management System</h1>
+<div  style="background-image: url('https://media.istockphoto.com/photos/triangular-abstract-background-picture-id624878906?k=6&m=624878906&s=612x612&w=0&h=uDcbe038RdtiiHchahAbwOYfx0bkPVLfsn0NOjA0gTM='); 
+ background-repeat: no-repeat;
+    background-size: cover;position: absolute;top: 35%;left: 10%"><h1>Welcome to Cafetaria Management System</h1></div>
 
 	
 
