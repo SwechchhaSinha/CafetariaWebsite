@@ -9,27 +9,35 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.cafe.model.beans.Menu;
 import com.cafe.model.service.impl.EmployeeServiceImpl;
 
-public class DisplayMenuController extends HttpServlet {
+public class OptingFood extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-    public DisplayMenuController() {
+    public OptingFood() {
         super();
     }
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doPost(request, response);
 	}
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		EmployeeServiceImpl service=new EmployeeServiceImpl();
 		HttpSession session=request.getSession(false);
-		try {
-			Menu menu=service.displayMenu();
-			request.setAttribute("menu", menu);
-			response.sendRedirect("./Menu.jsp");
-		} catch (ClassNotFoundException | SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		EmployeeServiceImpl service=new EmployeeServiceImpl();
+		String optingStatus=request.getParameter("optingStatus");
+		if(optingStatus.equalsIgnoreCase("y"))
+		{
+			session.setAttribute("opted", "yes");
+			try {
+				service.totalMonthlyExpense((String)session.getAttribute("ein"), 50);
+			} catch (ClassNotFoundException | SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			response.sendRedirect("./AddOn.jsp");
+		}
+		else
+		{
+			session.setAttribute("opted", "no");
+			response.sendRedirect("./AddOn.jsp");
 		}
 	}
 

@@ -43,5 +43,6 @@ public class Transaction
 		this.quantity = quantity;
 		this.price = price;
 	}
+	public Transaction(){}
 
 }

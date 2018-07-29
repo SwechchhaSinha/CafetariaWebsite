@@ -27,7 +27,7 @@ public class MonthlyExpenseController extends HttpServlet {
 		LocalDate date=LocalDate.now();
 		int month=date.getMonthValue();
 		int year=date.getYear();
-		HttpSession session=request.getSession();
+		HttpSession session=request.getSession(false);
 		try {
 			expense=service.monthlyFoodExpense((String)session.getAttribute("ein"));
 			session.setAttribute("expense",expense );
