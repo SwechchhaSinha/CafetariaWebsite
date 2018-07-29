@@ -54,17 +54,7 @@ tr:nth-child(even) {
   <a href="#">Take out stock</a>
 
 </div>
-<<<<<<< HEAD
-<h1>gfshgxsha</h1>
-<%=session.getId() %>
-<%=session.isNew() %>
-${sessionScope.Stock}
- <%=session.getAttribute("Stock") %>
-<!-- 
-<x:forEach var="food" items="${sessionScope.Stock}" >
-<x:out value="${food.F_id }"></x:out>
-</x:forEach>-->
-=======
+
 <table>
  <tr>
     <th>STOCK ID</th>
@@ -72,7 +62,7 @@ ${sessionScope.Stock}
     <th>CATEGORY</th>
     <th>QUANTITY</th>
   </tr>
-<x:forEach var="food" items="${sessionScope.StockCategory}" >
+<x:forEach var="food" items="${sessionScope.Stock}" >
 <tr>
 <td><x:out value="${food.f_id }"></x:out></td>
 <td><x:out value="${food.f_name }"></x:out></td>
@@ -82,7 +72,7 @@ ${sessionScope.Stock}
 
 </x:forEach>
 </table>
->>>>>>> refs/remotes/origin/master
+
 <script>
 window.onscroll = function() {myFunction()};
 
