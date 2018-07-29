@@ -23,7 +23,7 @@
 		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 		<a href="./EmployeeJsp.jsp">Home</a> <a href="./DisplayMenuController">Daily
 			Menu</a> <a href="./MonthlyExpenseController">Monthy Expense</a> <a
-			href="./AddOn.jsp">Choose Add Ons</a> <a href="./OptFood">Opt for
+			href="./AddOns">Choose Add Ons</a> <a href="./OptFood">Opt for
 			food</a>
 	</div>
 <script>

@@ -6,8 +6,15 @@
 <link rel="stylesheet" href="CssForNavBar.css">
 <link rel="stylesheet" href="SideNavBar.css">
 <title>Welcome to CMS</title>
+<link href='https://fonts.googleapis.com/css?family=Berkshire Swash' rel='stylesheet'>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-<body>
+<body style="text-align: center; background-image: url('https://images.cdn4.stockunlimited.net/preview1300/seamless-fast-food-pattern-background_1265398.jpg'); 
+ background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Berkshire Swash';font-size: 30px;">
 
 <div id="navbar">
   <a class="active" href="javascript:void(0)">Logout</a>
@@ -84,11 +91,12 @@ for (i = 0; i < dropdown.length; i++) {
 </script>
 </div>
 <br>
-<div id="enterDate">
+
+<div id="enterDate" style="background-color:#f4bc42; width: 30%;position: absolute;top: 30%;left: 35%">
 	<form action="./StockGenerateReport">
-	  Enter date:
-	  <input type="date" name="transactionDate">
-	  <button onclick="generate()" type="submit">Submit</button>
+	  <br><h1>Enter date:</h1><br>
+	  <input type="date" name="transactionDate"><br><br>
+	  <button onclick="generate()" type="submit">Submit</button><br><br>
 	</form>
 </div>
 

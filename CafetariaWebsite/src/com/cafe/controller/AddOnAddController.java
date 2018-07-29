@@ -39,7 +39,7 @@ public class AddOnAddController extends HttpServlet {
 				int choice = service.buyAddOn(selectedItemId, Integer.parseInt(request.getParameter("quantity")));
 				if (choice == 0) {
 					service.totalMonthlyExpense((String) session.getAttribute("ein"), price * quantity);
-					request.setAttribute("addOn", service.addON());
+					session.setAttribute("addOn", service.addON());
 					response.sendRedirect("./AddOnMoreOrSubmit.jsp");
 				} else {
 					session.setAttribute("addOnError", "This much quantity not available");

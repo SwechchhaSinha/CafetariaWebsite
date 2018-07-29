@@ -3,7 +3,6 @@
   <display-name>CafetariaWebsite</display-name>
   <welcome-file-list>
     <welcome-file>Home.jsp</welcome-file>
-   
   </welcome-file-list>
   <servlet>
     <description></description>
@@ -152,5 +151,15 @@
   <servlet-mapping>
     <servlet-name>StockUpdate3</servlet-name>
     <url-pattern>/StockUpdate3</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AddOns</display-name>
+    <servlet-name>AddOns</servlet-name>
+    <servlet-class>com.cafe.controller.AddOns</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddOns</servlet-name>
+    <url-pattern>/AddOns</url-pattern>
   </servlet-mapping>
 </web-app>
