@@ -15,9 +15,12 @@ public class LoginHelper {
 		if(employee==null)
 			return "User does not exist. Please sign up!!";
 			
-		if(employee.getPassword().equals(password)&&employee.getEIN().equals(employeeEin))
+		if(employee.getPassword().equals(password))
 		{
-			return "Login Successful";
+			if(employeeEin.equals("admin"))
+				return "admin";
+			else
+				return "Login Successful";
 		}
 		else
 		{

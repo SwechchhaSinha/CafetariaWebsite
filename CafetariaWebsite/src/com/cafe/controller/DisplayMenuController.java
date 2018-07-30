@@ -22,7 +22,7 @@ public class DisplayMenuController extends HttpServlet {
 	}
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		EmployeeServiceImpl service=new EmployeeServiceImpl();
-		HttpSession session=request.getSession();
+		HttpSession session=request.getSession(false);
 		try {
 			Menu menu=service.displayMenu();
 			session.setAttribute("menu", menu);

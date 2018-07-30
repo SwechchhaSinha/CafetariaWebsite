@@ -1,0 +1,34 @@
+@charset "ISO-8859-1";
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 12.5%;
+  max-width: 12.5%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 200px) {
+  .column {
+    flex: 15%;
+    max-width: 15%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 100px) {
+  .column {
+    flex: 10%;
+    max-width: 20%;
+  }
+}

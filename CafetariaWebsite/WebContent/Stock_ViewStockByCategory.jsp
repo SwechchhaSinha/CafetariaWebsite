@@ -7,26 +7,35 @@
 <head>
 <link rel="stylesheet" href="CssForNavBar.css">
 <link rel="stylesheet" href="SideNavBar.css">
+<link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
 <style type="text/css">
+
 table {
-    font-family: arial, sans-serif;
+    font-family: Sofia;
     border-collapse: collapse;
     width: 100%;
+    left: 20%;
+    top: 20%
 }
 
 td, th {
-    border: 1px solid #dddddd;
+    border: 5px solid black;
     text-align: left;
     padding: 8px;
 }
 
 tr:nth-child(even) {
-    background-color: #dddddd;
+    background-color:#41f4c4 ;
+}
+tr:nth-child(odd) {
+    background-color: #3c9b82;
 }
 </style>
 <title>Welcome to CMS</title>
 </head>
-<body>
+<body style="text-align: center; background-image: url('https://media.istockphoto.com/photos/triangular-abstract-background-picture-id624878906?k=6&m=624878906&s=612x612&w=0&h=uDcbe038RdtiiHchahAbwOYfx0bkPVLfsn0NOjA0gTM='); 
+ background-repeat: no-repeat;
+    background-size: cover;">
 
 <div id="navbar">
   <a class="active" href="javascript:void(0)">Logout</a>
@@ -45,15 +54,25 @@ tr:nth-child(even) {
   </button>
   <div class="dropdown-container">
     <a href="./AllStock">All</a>
-    <a href="#">Category wise</a>
+    <a href="./StockByCategory">Category wise</a>
     
   </div>
   <a href="Stock_GenerateReport.jsp">Generate Report</a>
-  <a href="#">Update Stock</a>
+ <button class="dropdown-btn">Update Stock 
+    <i class="fa fa-caret-down"></i>
+  </button>
+ <div class="dropdown-container">
+	    <a href="./Stock_Insert.jsp">Insert</a>
+	    <a href="./Stock_Update.jsp">Update</a>
+	    <a href="./Stock_Delete.jsp">Delete</a>
+</div>
+  <!-- <a href="#">Update Stock</a> -->
   <a href="#">Update Menu</a>
-  <a href="#">Take out stock</a>
+  <a href="Stock_TakeOut.jsp">Take out stock</a>
+
 
 </div>
+<div style="position:absolute;top: 15%;left: 25%;width: 50%">
 <table>
  <tr>
     <th>STOCK ID</th>
@@ -69,6 +88,7 @@ tr:nth-child(even) {
 
 </x:forEach>
 </table>
+</div>
 <script>
 window.onscroll = function() {myFunction()};
 

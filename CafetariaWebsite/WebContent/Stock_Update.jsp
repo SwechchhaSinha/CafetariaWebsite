@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-    <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="stock" %> 
 <!DOCTYPE html >
 <html>
 <head>
@@ -30,24 +29,19 @@
     
   </div>
   <a href="Stock_GenerateReport.jsp">Generate Report</a>
-   <button class="dropdown-btn">Update Stock
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+ 
+  <button class="dropdown-btn">Update Stock 
     <i class="fa fa-caret-down"></i>
   </button>
-  <div class="dropdown-container">
-   <a href="Stock_Insert.java">Insert Stock</a>
-   <a href="Stock_Update.java">Update Current Stock</a>
-   <a href="Stock_Delete.java">Delete Stock</a>
-    
-  </div>
+ <div class="dropdown-container">
+	    <a href="./Stock_Insert.jsp">Insert</a>
+	    <a href="./Stock_Update.jsp">Update</a>
+	    <a href="./Stock_Delete.jsp">Delete</a>
+</div>
+  <!-- <a href="#">Update Stock</a> -->
   <a href="#">Update Menu</a>
   <a href="Stock_TakeOut.jsp">Take out stock</a>
-
-
-<form action="./">
-
-
-<input type="submit" value="">
-</form>
 
 
 <script>
@@ -87,7 +81,17 @@ for (i = 0; i < dropdown.length; i++) {
   });
 }
 </script>
+</div>
+<br>
+<form action="./StockUpdate2">
+Please Enter the following details: 
+<br><br>FoodId: <input type="text" name="foodId" >
+<br><br> Quanity:<input type="text" name="quantity">
+<br><br> Price:<input type="text" name="price">
+<br><br><input type="submit">
 
 
+
+</form>
 </body>
 </html>

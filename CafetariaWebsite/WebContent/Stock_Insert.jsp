@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-    <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="stock" %> 
 <!DOCTYPE html >
 <html>
 <head>
@@ -9,6 +8,7 @@
 <title>Welcome to CMS</title>
 </head>
 <body>
+
 <div id="navbar">
   <a class="active" href="javascript:void(0)">Logout</a>
   <a style="float:left"><span style="font-size:25px;cursor:pointer" onclick="openNav()">&#9776;</span></a>
@@ -30,24 +30,19 @@
     
   </div>
   <a href="Stock_GenerateReport.jsp">Generate Report</a>
-   <button class="dropdown-btn">Update Stock
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+ 
+  <button class="dropdown-btn">Update Stock 
     <i class="fa fa-caret-down"></i>
   </button>
-  <div class="dropdown-container">
-   <a href="Stock_Insert.java">Insert Stock</a>
-   <a href="Stock_Update.java">Update Current Stock</a>
-   <a href="Stock_Delete.java">Delete Stock</a>
-    
-  </div>
+ <div class="dropdown-container">
+	    <a href="./Stock_Insert.jsp">Insert</a>
+	    <a href="./Stock_Update.jsp">Update</a>
+	    <a href="./Stock_Delete.jsp">Delete</a>
+</div>
+  <!-- <a href="#">Update Stock</a> -->
   <a href="#">Update Menu</a>
   <a href="Stock_TakeOut.jsp">Take out stock</a>
-
-
-<form action="./">
-
-
-<input type="submit" value="">
-</form>
 
 
 <script>
@@ -87,7 +82,25 @@ for (i = 0; i < dropdown.length; i++) {
   });
 }
 </script>
+</div>
+<br>
+<form action="./StockUpdate1">
+Please Enter the following details: 
+<br><br>FoodId: <input type="text" name="foodId" >
+<br><br> Name: <input type="text" name="name">
+<br><br> Category:
+<select name="category">
+  <option value="vegetables">Vegetable</option>
+  <option value="grains">Grains</option>
+  <option value="spices">Spices</option>
+  <option value="fruits">Fruits</option>
+</select>
+<br><br> Quanity:<input type="text" name="quantity">
+<br><br> Price:<input type="text" name="price">
+<br><br><input type="submit">
 
 
+
+</form>
 </body>
 </html>

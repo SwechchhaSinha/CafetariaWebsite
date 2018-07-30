@@ -1,16 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="x" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="CssForNavBar.css">
-<link rel="stylesheet" type="text/css" href="SideNavBar.css">
+
+<link rel="stylesheet" type="text/css" href="<x:url value="./CssForNavBar.css"/>">
+<link rel="stylesheet" type="text/css" href="<x:url value="./SideNavBar.css"/>">
  
 <title>Cafeteria</title>
 </head>
-<body>
+<body style="marin:auto; text-align: center;">
 <div id="navbar">
-  <a class="active" href="javascript:void(0)">Home</a>
+  
   <a href="javascript:void(0)">Logout</a>
   <a style="float:left"><span style="font-size:25px;cursor:pointer" onclick="openNav()">&#9776;</span></a> 
   
@@ -20,8 +22,8 @@
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <a href="./DisplayMenuController">Daily Menu</a>
   <a href="./MonthlyExpenseController">Monthy Expense</a>
-  <a href="#">Choose Add Ons</a>
-  <a href="#">Opt for food</a>
+  <a href="./AddOns">Choose Add Ons</a>
+  <a href="./OptFood">Opt for food</a>
 </div>
 <script>
 window.onscroll = function() {myFunction()};
@@ -49,6 +51,9 @@ function closeNav() {
     document.body.style.backgroundColor = "white";
 }
 </script>
-<h1>hello</h1>
+<div id="main" style="text-align:center;">
+<h1><i>Welcome To Our Cafeteria Management System!!!</i></h1>
+<h2><b><i> To Eat is Human and to Eat Well is DIVINE.</i></b></h2>
+</div>
 </body>
 </html>
