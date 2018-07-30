@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="x"%>
 <!DOCTYPE html >
 <html>
 <head>
@@ -8,9 +9,13 @@
 <title>Welcome to CMS</title>
 </head>
 <body>
-
+<x:if test="${sessionScope.ein == null}">
+   <script>alert("Please login to continue!!");
+    location.href='Home.jsp';
+    </script>
+</x:if>
 <div id="navbar">
-  <a class="active" href="javascript:void(0)">Logout</a>
+  <a class="active" href="./Logout">Logout</a>
   <a style="float:left"><span style="font-size:25px;cursor:pointer" onclick="openNav()">&#9776;</span></a>
   <!-- <a href="javascript:void(0)">Logout</a> -->
   

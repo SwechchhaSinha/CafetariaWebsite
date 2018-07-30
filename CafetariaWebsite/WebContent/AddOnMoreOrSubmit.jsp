@@ -15,7 +15,11 @@
 <title>Add More or Submit</title>
 </head>
 <body style="marin:auto; text-align: center;">
-
+<x:if test="${sessionScope.ein == null}">
+    <script>alert("Please login to continue!!");
+    location.href='Home.jsp';
+    </script>
+</x:if>
 
 
 	<div id="navbar">

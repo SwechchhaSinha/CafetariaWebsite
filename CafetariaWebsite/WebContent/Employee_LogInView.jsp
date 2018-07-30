@@ -8,6 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body style="margin:auto; text-align: center;">
+
 <h1 >Error Wrong Login Credentials</h1>
 <x:choose> 
 	<x:when test="${requestScope.failure='Please enter correct password'}">

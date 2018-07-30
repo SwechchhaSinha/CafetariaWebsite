@@ -30,6 +30,7 @@ public class LoginController extends HttpServlet {
 			if(result.equals("admin"))
 			{
 				session=request.getSession();
+				session.setAttribute("ein", "ADMIN");
 				session.setAttribute("success", "Admin Login Successful");
 				response.sendRedirect("./CafeteriaManager.jsp");
 			}
