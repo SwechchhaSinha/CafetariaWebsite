@@ -7,8 +7,12 @@
 <link rel="stylesheet" href="CssForNavBar.css">
 <link rel="stylesheet" href="SideNavBar.css">
 <title>Welcome to CMS</title>
+<link href='https://fonts.googleapis.com/css?family=Berkshire Swash' rel='stylesheet'>
 </head>
-<body>
+<body style="text-align: center; background-image: url('https://images.cdn4.stockunlimited.net/preview1300/seamless-fast-food-pattern-background_1265398.jpg'); 
+ background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Berkshire Swash';font-size: 30px;">
 <x:if test="${sessionScope.ein == null}">
    <script>alert("Please login to continue!!");
     location.href='Home.jsp';
@@ -89,23 +93,25 @@ for (i = 0; i < dropdown.length; i++) {
 </script>
 </div>
 <br>
+<div style="background-color:#f4bc42; width: 40%;position: relative;top: 10%;left: 30%" >
 <form action="./StockUpdate1">
 Please Enter the following details: 
-<br><br>FoodId: <input type="text" name="foodId" >
-<br><br> Name: <input type="text" name="name">
+<br><br>FoodId: <input type="text" name="foodId" required="required" >
+<br><br> Name: <input type="text" name="name" required="required">
 <br><br> Category:
-<select name="category">
+<select name="category" required="required">
   <option value="vegetables">Vegetable</option>
   <option value="grains">Grains</option>
   <option value="spices">Spices</option>
   <option value="fruits">Fruits</option>
 </select>
-<br><br> Quanity:<input type="text" name="quantity">
-<br><br> Price:<input type="text" name="price">
+<br><br> Quantity:<input type="text" name="quantity" required="required">
+<br><br> Price:<input type="text" name="price" required="required">
 <br><br><input type="submit">
 
 
 
 </form>
+</div>
 </body>
 </html>

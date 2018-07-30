@@ -53,7 +53,7 @@
 	    <a href="./Stock_Delete.jsp">Delete</a>
 </div>
   <a href="#">Update Menu</a>
-  <a href="ViewAllStockForStockTakeOut.java">Take out stock</a>
+  <a href="./ViewAllStockForStockTakeOut">Take out stock</a>
 
 
 <script>
