@@ -95,7 +95,7 @@ for (i = 0; i < dropdown.length; i++) {
 <div id="enterDate" style="background-color:#f4bc42; width: 30%;position: absolute;top: 30%;left: 35%">
 	<form action="./StockGenerateReport">
 	  <br><h1>Enter date:</h1><br>
-	  <input type="date" name="transactionDate"><br><br>
+	  <input type="date" name="transactionDate" required><br><br>
 	  <button onclick="generate()" type="submit">Submit</button><br><br>
 	</form>
 </div>

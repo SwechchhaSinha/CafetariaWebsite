@@ -45,7 +45,7 @@ public class StockTakeOut extends HttpServlet {
 			}
 			
 			else{
-				msgTakeOut = "Some Error occured";
+				msgTakeOut = "Not enough quanity present";
 			}
 			session.setAttribute("msgTakeOut", msgTakeOut);
 			PrintWriter out = response.getWriter();

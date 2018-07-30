@@ -162,4 +162,14 @@
     <servlet-name>AddOns</servlet-name>
     <url-pattern>/AddOns</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ViewAllStockForStockTakeOut</display-name>
+    <servlet-name>ViewAllStockForStockTakeOut</servlet-name>
+    <servlet-class>com.cafe.controller.ViewAllStockForStockTakeOut</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ViewAllStockForStockTakeOut</servlet-name>
+    <url-pattern>/ViewAllStockForStockTakeOut</url-pattern>
+  </servlet-mapping>
 </web-app>
