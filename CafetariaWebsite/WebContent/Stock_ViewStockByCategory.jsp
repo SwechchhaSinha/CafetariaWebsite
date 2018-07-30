@@ -36,9 +36,14 @@ tr:nth-child(odd) {
 <body style="text-align: center; background-image: url('https://media.istockphoto.com/photos/triangular-abstract-background-picture-id624878906?k=6&m=624878906&s=612x612&w=0&h=uDcbe038RdtiiHchahAbwOYfx0bkPVLfsn0NOjA0gTM='); 
  background-repeat: no-repeat;
     background-size: cover;">
+    <x:if test="${sessionScope.ein == null}">
+    <script>alert("Please login to continue!!");
+    location.href='Home.jsp';
+    </script>
+</x:if>
 
 <div id="navbar">
-  <a class="active" href="javascript:void(0)">Logout</a>
+  <a class="active" href="./Logout">Logout</a>
   <a style="float:left"><span style="font-size:25px;cursor:pointer" onclick="openNav()">&#9776;</span></a>
   <!-- <a href="javascript:void(0)">Logout</a> -->
   

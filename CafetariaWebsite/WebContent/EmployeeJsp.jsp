@@ -11,9 +11,14 @@
 <title>Cafeteria</title>
 </head>
 <body style="marin:auto; text-align: center;">
+<x:if test="${sessionScope.ein == null}">
+   <script>alert("Please login to continue!!");
+    location.href='Home.jsp';
+    </script>
+</x:if>
 <div id="navbar">
   
-  <a href="javascript:void(0)">Logout</a>
+  <a href="./Logout">Logout</a>
   <a style="float:left"><span style="font-size:25px;cursor:pointer" onclick="openNav()">&#9776;</span></a> 
   
 </div>
