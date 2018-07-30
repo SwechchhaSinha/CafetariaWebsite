@@ -41,6 +41,7 @@
     
   </div>
   <a href="Stock_GenerateReport.jsp">Generate Report</a>
+
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
  
   <button class="dropdown-btn">Update Stock 
@@ -51,7 +52,6 @@
 	    <a href="./Stock_Update.jsp">Update</a>
 	    <a href="./Stock_Delete.jsp">Delete</a>
 </div>
-  <!-- <a href="#">Update Stock</a> -->
   <a href="#">Update Menu</a>
   <a href="Stock_TakeOut.jsp">Take out stock</a>
 

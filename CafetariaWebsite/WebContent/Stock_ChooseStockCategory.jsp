@@ -42,6 +42,7 @@
     
   </div>
   <a href="Stock_GenerateReport.jsp">Generate Report</a>
+
    <button class="dropdown-btn">Update Stock 
     <i class="fa fa-caret-down"></i>
   </button>

@@ -68,7 +68,6 @@ function myFunction() {
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
 }
-
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
 }
@@ -91,8 +90,8 @@ for (i = 0; i < dropdown.length; i++) {
 <br>
 <div id="TakeOutStock">
 	<form action="./StockTakeOut">
-	  Enter Food Id: <input type="text" name="foodId">
-	  Enter Quantity: <input type="text" name="quantity">
+	  Enter Food Id: <input type="text" name="foodId"><br><br>
+	  Enter Quantity: <input type="text" name="quantity"><br><br>
 	  <input type="Submit">
 	</form>
 </div>

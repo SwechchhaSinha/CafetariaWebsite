@@ -74,8 +74,9 @@ public class StockManagerServiceImpl implements StockManagerService {
 				return 3;
 		}
 
-		else
+		else{
 			return 4;
+		}
 	}
 
 	@Override
@@ -91,7 +92,6 @@ public class StockManagerServiceImpl implements StockManagerService {
 		ArrayList<Transaction> transactions=transactionDaoImpl.searchTransaction(date);
 		if(!transactions.isEmpty())
 		{
-		
 		File report=new File("C:\\Users\\ve00ym016\\report_"+date);
 		FileOutputStream fileOutputStream=new FileOutputStream(report);
 		DataOutputStream stream=new DataOutputStream(fileOutputStream);
